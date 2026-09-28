@@ -171,3 +171,29 @@ Write a program that calculates the parking fee for a city garage:
 5.  If the calculated fee is **greater than 250 kr**, set the fee to **250 kr** (Maximum Daily Rate).
 6.  Ask if the user has a **"Loyalty Card"**. If **Yes**, subtract **20%** from the fee.
 7.  Display the **Final Fee** and end the program.
+
+**Solution**:
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Enter Number of Hours Parked/]:::io
+    B --> C{Hours <= 1?}:::dec
+    C -- No --> D{3 >= Hours > 1?}:::dec
+    C -- Yes --> E[Set Fee to 0 kr]:::proc
+    E --> Z[/Display Final Price/]:::io
+    Y -- No --> Z[/Display Final Price/]:::io
+    Y -- Yes --> W[Subtract 20% from Fee]:::proc
+    W --> Z[/Display Final Price/]:::io
+    D -- No --> G[Fee is 50 kr + 40 kr for every hour beyond the 3rd hour]:::proc
+    D -- Yes --> F[Fee is 50 kr]:::proc
+    G --> H[If Fee > 250 kr set Fee to 250 kr]:::proc
+    H --> Y{Loyalty Card?}:::dec
+    F --> Y{Loyalty Card?}:::dec
+    Z --> X([End]):::term
+    
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+```
