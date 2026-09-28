@@ -12,6 +12,21 @@
 
 4.  If they are equal, display **"Both numbers are equal."**
 
+**Solution**:
+
+```text
+Start
+Input A
+Input B
+If A > B Then
+    Display A
+Else If B > A Then
+    Display B
+Else
+    Display "Both numbers are equal."
+EndIf
+End
+```
 
 ### Exercise 2: Sum of 5 Numbers (Loop + Accumulation)
 
