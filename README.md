@@ -120,7 +120,7 @@ Write a program that:
 flowchart TD
     A([Start]):::term --> B[/Enter Password/]:::io
     B --> C[Retrieve stored password]:::proc
-    C --> D{Entered Password === Stored Password ?}:::dec
+    C --> D{Entered Password === Stored Password?}:::dec
     D -- No --> F[/Display "Access Denied."/]:::io
     D -- Yes --> E[/Display "Access Granted."/]:::io
     F --> G([End]):::term
@@ -141,6 +141,26 @@ Write a program that calculates the final price of an online order:
 5. Calculate and display the **final price** after the discount.
 6. End the program.
 
+**Solution**:
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Enter Total Purchase Amount/]:::io
+    B --> C{Amount >= 5000?}:::dec
+    C -- No --> D{5000 > Amount >= 2000}:::dec
+    C -- Yes --> E[Apply 20% Discount]:::proc
+    E --> Y[/Display Final Price/]:::io
+    Y --> X([End]):::term
+    D -- No --> Y[/Display Final Price/]:::io
+    D -- Yes --> F[Apply 10% Discount]:::proc
+    F --> Y[/Display Final Price/]:::io
+    
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+```
 
 ### Exercise 5: Smart Parking Fee Calculator
 Write a program that calculates the parking fee for a city garage:
