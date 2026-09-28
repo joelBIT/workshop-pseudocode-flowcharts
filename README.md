@@ -59,6 +59,21 @@ Write a program that asks the user to enter their age.
 - If the age is **less than 18**, display: "You are not eligible to vote."
 - End the program.
 
+**Solution**:
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Enter Age/]:::io
+    B --> C{Age >= 18?}:::dec
+    C -- No --> D[/Display "You are not eligible to vote."/]:::io
+    C -- Yes --> E[/Display "You are eligible to vote."/]:::io
+    D --> F([End]):::term
+    E --> F([End]):::term
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+```
 
 ### Exercise 2: Student Grade Calculator
 Write a program that takes a student's marks (out of 100) as input and determines their grade:
