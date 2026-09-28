@@ -114,6 +114,23 @@ Write a program that:
 4. If they don't match, display: "Access Denied."
 5. End the program.
 
+**Solution**:
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Enter Password/]:::io
+    B --> C[Retrieve stored password]:::proc
+    C --> D{Entered Password === Stored Password ?}:::dec
+    D -- No --> F[/Display "Access Denied."/]:::io
+    D -- Yes --> E[/Display "Access Granted."/]:::io
+    F --> G([End]):::term
+    E --> G([End]):::term
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+```
 
 ### Exercise 4: Online Shopping Discount
 Write a program that calculates the final price of an online order:
