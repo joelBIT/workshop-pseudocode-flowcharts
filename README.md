@@ -36,6 +36,19 @@ End
 
 3.  Displays the final result.
 
+**Solution**:
+
+```text
+Start
+Variable Sum = 0
+Loop 5 times
+    Input A
+    Sum += A
+EndLoop
+Display Sum
+End
+```
+
 ---
 
 ## 🏗️ Flowchart practice
