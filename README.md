@@ -83,6 +83,28 @@ Write a program that takes a student's marks (out of 100) as input and determine
 - **Below 50:** "Fail"
 - End the program.
 
+**Solution**:
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Enter Marks/]:::io
+    B --> C{Marks >= 90?}:::dec
+    C -- No --> D{90 > Marks >= 75?}:::dec
+    C -- Yes --> E[Grade A]:::proc
+    E --> X([End]):::term
+    D -- No --> F{75 > Marks >= 50?}:::dec
+    D -- Yes --> G[Grade B]:::proc
+    G --> X([End]):::term
+    F -- No --> H[FAIL]:::proc
+    F -- Yes --> I[Grade C]:::proc
+    H --> X([End]):::term
+    I --> X([End]):::term
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+```
 
 ### Exercise 3: Simple Password Check
 Write a program that:
