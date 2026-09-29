@@ -147,7 +147,7 @@ Write a program that calculates the final price of an online order:
 flowchart TD
     A([Start]):::term --> B[/Enter Total Purchase Amount/]:::io
     B --> C{Amount >= 5000?}:::dec
-    C -- No --> D{5000 > Amount >= 2000}:::dec
+    C -- No --> D{Amount >= 2000}:::dec
     C -- Yes --> E[Apply 20% Discount]:::proc
     E --> Y[/Display Final Price/]:::io
     Y --> X([End]):::term
@@ -178,7 +178,7 @@ Write a program that calculates the parking fee for a city garage:
 flowchart TD
     A([Start]):::term --> B[/Enter Number of Hours Parked/]:::io
     B --> C{Hours <= 1?}:::dec
-    C -- No --> D{3 >= Hours > 1?}:::dec
+    C -- No --> D{Hours <= 3?}:::dec
     C -- Yes --> E[Set Fee to 0 kr]:::proc
     E --> Z[/Display Final Price/]:::io
     Y -- No --> Z[/Display Final Price/]:::io
