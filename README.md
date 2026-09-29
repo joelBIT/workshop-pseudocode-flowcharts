@@ -186,8 +186,10 @@ flowchart TD
     W --> Z[/Display Final Price/]:::io
     D -- No --> G[Fee is 50 kr + 40 kr for every hour beyond the 3rd hour]:::proc
     D -- Yes --> F[Fee is 50 kr]:::proc
-    G --> H[If Fee > 250 kr set Fee to 250 kr]:::proc
-    H --> Y{Loyalty Card?}:::dec
+    G --> H{Fee > 250 kr?}:::dec
+    H -- No --> Y{Loyalty Card?}:::dec
+    H -- Yes --> K[Set Fee to 250 kr]:::proc
+    K --> Y{Loyalty Card?}:::dec
     F --> Y{Loyalty Card?}:::dec
     Z --> X([End]):::term
     
