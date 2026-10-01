@@ -15,17 +15,17 @@
 **Solution**:
 
 ```text
-Start
-Input A
-Input B
-If A > B Then
-    Display A
-Else If B > A Then
-    Display B
-Else
-    Display "Both numbers are equal."
-EndIf
-End
+START
+    INPUT A
+    INPUT B
+    IF A > B THEN
+        PRINT A
+    ELSE IF B > A THEN
+        PRINT B
+    ELSE
+        PRINT "Both numbers are equal."
+    ENDIF
+END
 ```
 
 ### Exercise 2: Sum of 5 Numbers (Loop + Accumulation)
@@ -39,14 +39,14 @@ End
 **Solution**:
 
 ```text
-Start
-Variable Sum = 0
-Loop 5 times
-    Input A
-    Sum += A
-EndLoop
-Display Sum
-End
+START
+    SET Sum = 0
+    FOR 5 iterations
+        INPUT A
+        Sum += A
+    ENDFOR
+    PRINT Sum
+END
 ```
 
 ---
@@ -242,6 +242,18 @@ classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
 Write the algorithm and draw the flowchart for a program that inputs
 marks for 3 subjects, calculates the total and average, and displays
 both.
+
+```text
+START
+    INPUT marksSubjectA
+    INPUT marksSubjectB
+    INPUT marksSubjectC
+    SET total = marksSubjectA + marksSubjectB + marksSubjectC
+    SET average = total / 3
+    PRINT total
+    PRINT average
+END
+```
 
 ---
 
