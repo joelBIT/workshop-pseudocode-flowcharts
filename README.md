@@ -379,6 +379,20 @@ END
 
 #### ✔ Flowchart
 
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Input P/]:::io
+    B --> C[/Input R/]:::io
+    C --> D[/Input T/]:::io
+    D --> E[SI = Product of P × R × T divided by 100]:::proc
+    E --> F[/Print SI/]:::io
+    F --> I([End]):::term
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+```
+
 ---
 
 ### 6. Average Temperature Calculation
