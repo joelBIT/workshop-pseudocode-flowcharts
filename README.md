@@ -200,7 +200,7 @@ classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
 classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
 classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
 ```
-## 🏗️ Workshop: Algorithm and Flowchart
+## 🏗️ Algorithm and Flowchart practice
 
 ### 1. Check Even or Odd Number
 Design an algorithm and flowchart that take a number as input and
@@ -282,6 +282,20 @@ classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
 
 Create an algorithm and flowchart that input a number and display its
 multiplication table from 1 to 10 using a loop.
+
+#### ✔ Pseudocode
+
+```text
+START
+    INPUT number
+    FOR i = 1 to 10
+        SET result = i * number
+        PRINT result
+    ENDFOR
+END
+```
+
+#### ✔ Flowchart
 
 ---
 
