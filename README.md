@@ -676,3 +676,45 @@ classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
 ```
 
 ---
+
+### 13. Mobile Data Usage Monitor
+
+Write the algorithm and draw the flowchart for a program that inputs a
+user's monthly data limit and data usage, then displays whether the user
+has exceeded the limit or how much data remains.
+
+#### ✔ Pseudocode
+
+```text
+START
+    INPUT monthly data limit
+    INPUT data usage
+    SET data remaining = monthly data limit - data usage
+    IF data remaining < 0
+        PRINT "Limit has been exceeded"
+    ELSE
+        PRINT data remaining
+    ENDIF
+END
+```
+
+#### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Input monthly data limit/]:::io
+    B --> C[/Input data usage/]:::io
+    C --> D[data remaining = monthly data limit - data usage]:::proc
+    D --> E{data remaining < 0 ?}:::dec
+    E -- No --> F[/Print data remaining/]:::io
+    E -- Yes --> G[/Display "Limit has been exceeded"/]:::io
+    F --> J([End]):::term
+    G --> J([End]):::term
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+```
+
+---
