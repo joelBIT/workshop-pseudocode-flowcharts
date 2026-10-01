@@ -510,6 +510,23 @@ classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
 Write the algorithm and draw the flowchart that input a number and
 calculate its factorial using a loop.
 
+#### ✔ Pseudocode
+
+```text
+START
+    INPUT positive integer
+    SET factorial = 1
+    SET i = given positive integer
+    WHILE i > 1
+        SET factorial = factorial * i
+        i = i - 1
+    ENDWHILE
+    PRINT factorial
+END
+```
+
+#### ✔ Flowchart
+
 ---
 
 ### 10. Calculate Discount on Purchase
