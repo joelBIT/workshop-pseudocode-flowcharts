@@ -90,20 +90,19 @@ flowchart TD
     A([Start]):::term --> B[/Enter Marks/]:::io
     B --> C{Marks >= 90 ?}:::dec
     C -- No --> D{Marks >= 75 ?}:::dec
-    C -- Yes --> E[Grade A]:::proc
+    C -- Yes --> E[/Display "Grade A"/]:::io
     E --> X([End]):::term
     D -- No --> F{Marks >= 50 ?}:::dec
-    D -- Yes --> G[Grade B]:::proc
+    D -- Yes --> G[/ Display "Grade B"/]:::io
     G --> X([End]):::term
-    F -- No --> H[FAIL]:::proc
-    F -- Yes --> I[Grade C]:::proc
+    F -- No --> H[/Display "FAIL"/]:::io
+    F -- Yes --> I[/Display "Grade C"/]:::io
     H --> X([End]):::term
     I --> X([End]):::term
 
 classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
 classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
 classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
-classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
 ```
 
 ### Exercise 3: Simple Password Check
@@ -365,6 +364,20 @@ interest using the formula:
 - **P = Principal** → original amount of money
 - **R = Rate of Interest** → percentage per year
 - **T = Time** → number of years
+
+#### ✔ Pseudocode
+
+```text
+START
+    INPUT P
+    INPUT R
+    INPUT T
+    SET SI = (P × R × T) / 100
+    PRINT SI
+END
+```
+
+#### ✔ Flowchart
 
 ---
 
