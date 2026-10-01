@@ -200,3 +200,45 @@ classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
 classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
 classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
 ```
+## 🏗️ Workshop: Algorithm and Flowchart
+
+### 1. Check Even or Odd Number
+Design an algorithm and flowchart that take a number as input and
+determine whether it is even or odd.
+
+#### ✔ Pseudocode
+
+```text
+START
+    INPUT number
+    IF number % 2 == 0 THEN
+        PRINT Even
+    ELSE
+        PRINT Odd
+    ENDIF
+END
+```
+
+#### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> I[/Get input N/]:::io
+    I --> B{N % 2 == 0 ?}:::dec
+    B -->|Yes| C[/Print Even/]:::io
+    B -->|No| D[/Print Odd/]:::io
+    C --> E([End]):::term
+    D --> E([End]):::term
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+```
+
+---
+
+### 2. Calculate Total and Average Marks
+
+Write the algorithm and draw the flowchart for a program that inputs
+marks for 3 subjects, calculates the total and average, and displays
+both.
