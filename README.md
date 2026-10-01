@@ -445,8 +445,8 @@ the area (**Area = Length × Width**), and display the result.
 
 ```text
 START
-    INPUT length
-    INPUT width
+    INPUT length as a positive value
+    INPUT width as a positive value
     SET area = length * width
     PRINT area
 END
@@ -457,14 +457,21 @@ END
 ```mermaid
 flowchart TD
     A([Start]):::term --> B[/Input length/]:::io
-    B --> C[/Input width/]:::io
-    C --> D[area = length * width]:::proc
+    B --> K{Is length a positive value?}:::dec
+    K -- No --> X[/Display "Length must be a positive value"/]:::io
+    X --> B[/Input length/]:::io
+    K -- Yes --> C[/Input width/]:::io
+    C --> L{Is width a positive value?}:::dec
+    L -- No --> Y[/Display "Width must be a positive value"/]:::io
+    Y --> C[/Input width/]:::io
+    L -- Yes --> D[area = length * width]:::proc
     D --> F[/Print area/]:::io
     F --> I([End]):::term
 
 classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
 classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
 classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
 ```
 
 ---
@@ -519,7 +526,7 @@ START
     SET i = given positive integer
     WHILE i > 1
         SET factorial = factorial * i
-        i = i - 1
+        SET i = i - 1
     ENDWHILE
     PRINT factorial
 END
