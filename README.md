@@ -630,3 +630,49 @@ classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
 ```
 
 ---
+
+### 12. Employee Salary and Bonus Calculator
+
+Write the algorithm and draw the flowchart for a program that inputs an
+employee's monthly salary and years of service, calculates a bonus of
+**10%** for employees with 5 or more years of service and **5%** for
+others, then displays the bonus and total salary.
+
+#### ✔ Pseudocode
+
+```text
+START
+    INPUT monthly salary
+    INPUT years of service
+    SET bonus = 5%
+    IF years of service >= 5
+        SET bonus = 10%
+    ENDIF
+    PRINT bonus
+    SET total salary = monthly salary * bonus
+    PRINT total salary
+END
+```
+
+#### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Input monthly salary/]:::io
+    B --> C[/Input years of service/]:::io
+    C --> D[bonus = 5%]:::proc
+    D --> E{years of service >= 5 ?}:::dec
+    E -- No --> F[/Print bonus/]:::io
+    E -- Yes --> G[bonus = 10%]:::proc
+    G --> F[/Print bonus/]:::io
+    F --> H[total salary = monthly salary plus bonus]:::proc
+    H --> I[/Print total salary/]:::io
+    I --> J([End]):::term
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+```
+
+---
