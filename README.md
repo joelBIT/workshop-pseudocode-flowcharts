@@ -261,9 +261,9 @@ END
 
 ```mermaid
 flowchart TD
-    A([Start]):::term --> B[/Get input marks subject A/]:::io
-    B --> C[/Get input marks subject B/]:::io
-    C --> D[/Get input marks subject C/]:::io
+    A([Start]):::term --> B[/Input marks subject A/]:::io
+    B --> C[/Input marks subject B/]:::io
+    C --> D[/Input marks subject C/]:::io
     D --> E[Calculate the total]:::proc
     E --> F[Calculate the average]:::proc
     F --> G[/Print total/]:::io
@@ -272,7 +272,6 @@ flowchart TD
 
 classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
 classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
-classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
 classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
 ```
 
@@ -296,6 +295,23 @@ END
 ```
 
 #### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Input number/]:::io
+    B --> C[Set i = 1]:::proc
+    C --> D{i > 10?}:::dec
+    D -- No --> E[Set result = i * number]:::proc
+    D -- Yes --> I([End]):::term
+    E --> F[/Display result/]:::io
+    F --> G[Set i = i + 1]:::proc
+    G --> D
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+```
 
 ---
 
