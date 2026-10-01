@@ -534,6 +534,24 @@ END
 
 #### ✔ Flowchart
 
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Input positive integer/]:::io
+    C --> D[factorial = 1]:::proc
+    B --> C[i = given positive integer]:::proc
+    D --> E{i > 1 ?}:::dec
+    E -- No --> F[/Print factorial/]:::io
+    E -- Yes --> G[factorial = factorial * i]:::proc
+    G --> L[i = i - 1]:::proc
+    L --> E{i > 1 ?}:::dec
+    F --> I([End]):::term
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+```
+
 ---
 
 ### 10. Calculate Discount on Purchase
