@@ -64,7 +64,7 @@ Write a program that asks the user to enter their age.
 ```mermaid
 flowchart TD
     A([Start]):::term --> B[/Enter Age/]:::io
-    B --> C{Age >= 18?}:::dec
+    B --> C{Age >= 18 ?}:::dec
     C -- No --> D[/Display "You are not eligible to vote."/]:::io
     C -- Yes --> E[/Display "You are eligible to vote."/]:::io
     D --> F([End]):::term
@@ -88,11 +88,11 @@ Write a program that takes a student's marks (out of 100) as input and determine
 ```mermaid
 flowchart TD
     A([Start]):::term --> B[/Enter Marks/]:::io
-    B --> C{Marks >= 90?}:::dec
-    C -- No --> D{90 > Marks >= 75?}:::dec
+    B --> C{Marks >= 90 ?}:::dec
+    C -- No --> D{Marks >= 75 ?}:::dec
     C -- Yes --> E[Grade A]:::proc
     E --> X([End]):::term
-    D -- No --> F{75 > Marks >= 50?}:::dec
+    D -- No --> F{Marks >= 50 ?}:::dec
     D -- Yes --> G[Grade B]:::proc
     G --> X([End]):::term
     F -- No --> H[FAIL]:::proc
@@ -146,8 +146,8 @@ Write a program that calculates the final price of an online order:
 ```mermaid
 flowchart TD
     A([Start]):::term --> B[/Enter Total Purchase Amount/]:::io
-    B --> C{Amount >= 5000?}:::dec
-    C -- No --> D{Amount >= 2000}:::dec
+    B --> C{Amount >= 5000 ?}:::dec
+    C -- No --> D{Amount >= 2000 ?}:::dec
     C -- Yes --> E[Apply 20% Discount]:::proc
     E --> Y[/Display Final Price/]:::io
     Y --> X([End]):::term
@@ -177,8 +177,8 @@ Write a program that calculates the parking fee for a city garage:
 ```mermaid
 flowchart TD
     A([Start]):::term --> B[/Enter Number of Hours Parked/]:::io
-    B --> C{Hours <= 1?}:::dec
-    C -- No --> D{Hours <= 3?}:::dec
+    B --> C{Hours <= 1 ?}:::dec
+    C -- No --> D{Hours <= 3 ?}:::dec
     C -- Yes --> E[Set Fee to 0 kr]:::proc
     E --> Z[/Display Final Price/]:::io
     Y -- No --> Z[/Display Final Price/]:::io
@@ -300,7 +300,7 @@ END
 flowchart TD
     A([Start]):::term --> B[/Input number/]:::io
     B --> C[Set i = 1]:::proc
-    C --> D{i > 10?}:::dec
+    C --> D{i > 10 ?}:::dec
     D -- No --> E[Set result = i * number]:::proc
     D -- Yes --> I([End]):::term
     E --> F[/Display result/]:::io
@@ -319,6 +319,39 @@ classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
 
 Write the algorithm and flowchart to input a number and display whether
 it is positive, negative, or zero.
+
+#### ✔ Pseudocode
+
+```text
+START
+    INPUT number
+    IF number > 0
+        PRINT Positive
+    ELSE IF number < 0
+        PRINT Negative
+    ELSE
+        PRINT zero
+END
+```
+
+#### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Input number/]:::io
+    B --> C{number > 0 ?}:::dec
+    C -- No --> E{number < 0 ?}:::dec
+    C -- Yes --> D[/Display Positive/]:::io
+    D --> I([End]):::term
+    E -- No --> F[/Display Zero/]:::io
+    E -- Yes --> G[/Display Negative/]:::io
+    F --> I([End]):::term
+    G --> I([End]):::term
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+```
 
 ---
 
