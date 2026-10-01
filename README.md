@@ -243,6 +243,8 @@ Write the algorithm and draw the flowchart for a program that inputs
 marks for 3 subjects, calculates the total and average, and displays
 both.
 
+#### ✔ Pseudocode
+
 ```text
 START
     INPUT marksSubjectA
@@ -253,6 +255,25 @@ START
     PRINT total
     PRINT average
 END
+```
+
+#### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Get input marks subject A/]:::io
+    B --> C[/Get input marks subject B/]:::io
+    C --> D[/Get input marks subject C/]:::io
+    D --> E[Calculate the total]:::proc
+    E --> F[Calculate the average]:::proc
+    F --> G[/Print total/]:::io
+    G --> H[/Print average/]:::io
+    H --> I([End]):::term
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
 ```
 
 ---
