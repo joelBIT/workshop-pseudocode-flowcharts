@@ -718,3 +718,62 @@ classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
 ```
 
 ---
+
+### 14. Login System (Maximum 3 Attempts)
+
+Create an algorithm and flowchart for a login system that allows a user
+up to 3 attempts to enter the correct password. Display **"Access
+Granted"** if the password is correct; otherwise display **"Account
+Locked"** after 3 failed attempts.
+
+#### ✔ Pseudocode
+
+```text
+START
+    SET attempts = 0
+    SET granted = false
+    SET correctPassword = 'correct_password'
+
+    WHILE attempts < 3 AND !granted
+        INPUT password
+        SET attempts += 1
+        IF password == correctPassword
+            SET granted = true
+        ENDIF
+    ENDWHILE
+
+    IF granted
+        Display "Access Granted"
+    ELSE
+        Display "Account Locked"
+    ENDIF
+END
+```
+
+#### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[attempts = 0]:::proc
+    B --> Y[granted = false]:::proc
+    Y --> W[correctPassword = 'correct_password']:::proc
+    W --> C{attempts < 3 AND !granted ?}:::dec
+    C -- False --> D{granted ?}:::dec
+    C -- True --> F[/Input password/]:::io
+    D -- Yes --> E[/Display "Access Granted"/]:::io
+    D -- No --> G[/Display "Account Locked"/]:::io
+    F --> H[attempts += 1]:::proc
+    H --> K{password == correctPassword ?}:::dec
+    K -- False --> C{attempts < 3 AND !granted ?}:::dec
+    K -- True --> X[granted = true]:::proc
+    X --> C{attempts < 3 AND !granted ?}:::dec
+    E --> J([End]):::term
+    G --> J([End]):::term
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+```
+
+---
