@@ -559,6 +559,7 @@ classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
 Write the algorithm and draw the flowchart for a program that inputs the
 purchase amount and gives a **10% discount** if the amount is greater
 than 1000.
+
 #### ✔ Pseudocode
 
 ```text
@@ -588,6 +589,44 @@ classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
 classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
 classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
 classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+```
+
+---
+
+### 11. Online Shopping Delivery Eligibility
+
+Write the algorithm and draw the flowchart for a program that inputs a
+customer's purchase amount and displays **"Free Delivery"** if the
+amount is 500 SEK or more; otherwise display **"Delivery Charge
+Applies"**.
+
+#### ✔ Pseudocode
+
+```text
+START
+    INPUT purchase amount
+    IF purchase amount >= 500
+        PRINT "Free Delivery"
+    ELSE
+        PRINT "Delivery Charge Applies"
+    ENDIF
+END
+```
+
+#### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Input purchase amount/]:::io
+    B --> D{purchase amount >= 500 ?}:::dec
+    D -- No --> F[/Display "Delivery Charge Applies"/]:::io
+    D -- Yes --> G[/Display "Free Delivery"/]:::io
+    F --> I([End]):::term
+    G --> I([End]):::term
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
 ```
 
 ---
