@@ -149,11 +149,11 @@ flowchart TD
     B --> C{Amount >= 5000 ?}:::dec
     C -- No --> D{Amount >= 2000 ?}:::dec
     C -- Yes --> E[Apply 20% Discount]:::proc
-    E --> Y[/Display Final Price/]:::io
+    E --> Y[/Print final price/]:::io
     Y --> X([End]):::term
-    D -- No --> Y[/Display Final Price/]:::io
+    D -- No --> Y[/Print final price/]:::io
     D -- Yes --> F[Apply 10% Discount]:::proc
-    F --> Y[/Display Final Price/]:::io
+    F --> Y[/Print final price/]:::io
     
 
 classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
@@ -180,10 +180,10 @@ flowchart TD
     B --> C{Hours <= 1 ?}:::dec
     C -- No --> D{Hours <= 3 ?}:::dec
     C -- Yes --> E[Set Fee to 0 kr]:::proc
-    E --> Z[/Display Final Price/]:::io
-    Y -- No --> Z[/Display Final Price/]:::io
+    E --> Z[/Print final price/]:::io
+    Y -- No --> Z[/Print final price/]:::io
     Y -- Yes --> W[Subtract 20% from Fee]:::proc
-    W --> Z[/Display Final Price/]:::io
+    W --> Z[/Print final price/]:::io
     D -- No --> G[Fee is 50 kr + 40 kr for every hour beyond the 3rd hour]:::proc
     D -- Yes --> F[Fee is 50 kr]:::proc
     G --> H{Fee > 250 kr?}:::dec
@@ -223,10 +223,10 @@ END
 
 ```mermaid
 flowchart TD
-    A([Start]):::term --> I[/Get input N/]:::io
+    A([Start]):::term --> I[/Input N/]:::io
     I --> B{N % 2 == 0 ?}:::dec
-    B -->|Yes| C[/Print Even/]:::io
-    B -->|No| D[/Print Odd/]:::io
+    B -->|Yes| C[/Display "Even"/]:::io
+    B -->|No| D[/Display "Odd"/]:::io
     C --> E([End]):::term
     D --> E([End]):::term
 
@@ -303,7 +303,7 @@ flowchart TD
     C --> D{i > 10 ?}:::dec
     D -- No --> E[Set result = i * number]:::proc
     D -- Yes --> I([End]):::term
-    E --> F[/Display result/]:::io
+    E --> F[/Print result/]:::io
     F --> G[Set i = i + 1]:::proc
     G --> D
 
@@ -341,10 +341,10 @@ flowchart TD
     A([Start]):::term --> B[/Input number/]:::io
     B --> C{number > 0 ?}:::dec
     C -- No --> E{number < 0 ?}:::dec
-    C -- Yes --> D[/Display Positive/]:::io
+    C -- Yes --> D[/Display "Positive"/]:::io
     D --> I([End]):::term
-    E -- No --> F[/Display Zero/]:::io
-    E -- Yes --> G[/Display Negative/]:::io
+    E -- No --> F[/Display "Zero"/]:::io
+    E -- Yes --> G[/Display "Negative"/]:::io
     F --> I([End]):::term
     G --> I([End]):::term
 
