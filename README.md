@@ -407,14 +407,32 @@ START
     SET total = 0
     FOR i = 1 to 7
         INPUT temperature for day i
-        total += temperature for day i
+        SET total += temperature for day i
     ENDFOR
-    SET average = total / i
+    SET average = total / 7
     PRINT average
 END
 ```
 
 #### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[total = 0 and i = 1]:::proc
+    B --> C{i > 7 ?}:::dec
+    C -- No --> D[/INPUT temperature for day i/]:::io
+    C -- Yes --> E[average = total / 7]:::proc
+    E --> F[/Print average/]:::io
+    F --> I([End]):::term
+    D --> H[total = total + temperature for day i]:::proc
+    H --> L[i = i + 1]:::proc
+    L --> C{i > 7 ?}:::dec
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+```
 
 ---
 
