@@ -400,6 +400,22 @@ classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
 Write the algorithm and draw the flowchart for a program that takes the
 temperature of 7 days, finds the average temperature, and displays it.
 
+#### ✔ Pseudocode
+
+```text
+START
+    SET total = 0
+    FOR i = 1 to 7
+        INPUT temperature for day i
+        total += temperature for day i
+    ENDFOR
+    SET average = total / i
+    PRINT average
+END
+```
+
+#### ✔ Flowchart
+
 ---
 
 ### 7. Calculate Area of a Rectangle
