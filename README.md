@@ -522,8 +522,8 @@ calculate its factorial using a loop.
 ```text
 START
     INPUT positive integer
-    SET factorial = 1
     SET i = given positive integer
+    SET factorial = 1
     WHILE i > 1
         SET factorial = factorial * i
         SET i = i - 1
@@ -559,5 +559,19 @@ classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
 Write the algorithm and draw the flowchart for a program that inputs the
 purchase amount and gives a **10% discount** if the amount is greater
 than 1000.
+#### ✔ Pseudocode
+
+```text
+START
+    INPUT purchase amount
+    SET cost = purchase amount
+    IF purchase amount > 1000
+        SET cost = 0.9 * cost
+    ENDIF
+    PRINT cost
+END
+```
+
+#### ✔ Flowchart
 
 ---
