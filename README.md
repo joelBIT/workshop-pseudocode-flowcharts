@@ -574,4 +574,20 @@ END
 
 #### ✔ Flowchart
 
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Input purchase amount/]:::io
+    C --> D{purchase amount > 1000 ?}:::dec
+    B --> C[cost = purchase amount]:::proc
+    D -- No --> F[/Print cost/]:::io
+    D -- Yes --> G[cost = 0.9 * cost]:::proc
+    G --> F[/Print cost/]:::io
+    F --> I([End]):::term
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+```
+
 ---
