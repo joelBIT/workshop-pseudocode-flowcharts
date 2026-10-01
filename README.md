@@ -441,6 +441,32 @@ classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
 Create an algorithm and flowchart to input length and width, calculate
 the area (**Area = Length × Width**), and display the result.
 
+#### ✔ Pseudocode
+
+```text
+START
+    INPUT length
+    INPUT width
+    SET area = length * width
+    PRINT area
+END
+```
+
+#### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Input length/]:::io
+    B --> C[/Input width/]:::io
+    C --> D[area = length * width]:::proc
+    D --> F[/Print area/]:::io
+    F --> I([End]):::term
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+```
+
 ---
 
 ### 8. Determine Pass or Fail
