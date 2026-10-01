@@ -777,3 +777,53 @@ classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
 ```
 
 ---
+
+### 15. Store Checkout with Multiple Items
+
+Write the algorithm and draw the flowchart for a program that inputs the
+number of items purchased, calculates the total purchase amount using a
+loop, and applies a **15% discount** if the total exceeds 5000 SEK.
+
+#### ✔ Pseudocode
+
+```text
+START
+    INPUT number of items purchased
+    SET i = 0
+    SET total = 0
+    WHILE i < number of items purchased
+        SET total += items[i].price
+        SET i += 1
+    ENDWHILE
+
+    IF total > 5000
+        SET total = total * 0.85
+    ENDIF
+    PRINT total
+END
+```
+
+#### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([Start]):::term --> B[/Input number of items purchased/]:::io
+    B --> Y[i = 0]:::proc
+    Y --> W[total = 0]:::proc
+    W --> C{i < number of items purchased ?}:::dec
+    C -- False --> D{total > 5000 ?}:::dec
+    C -- True --> F[total = total + price of item i]:::proc
+    D -- Yes --> E[total = total * 0.85]:::proc
+    D -- No --> G[/Print total/]:::io
+    F --> H[i += 1]:::proc
+    H --> C{i < number of items purchased ?}:::dec
+    E --> G[/Print total/]:::io
+    G --> J([End]):::term
+
+classDef term fill:#e3f2fd,stroke:#90caf9,color:#333,stroke-width:1px;
+classDef io fill:#fff3e0,stroke:#ffcc80,color:#333,stroke-width:1px;
+classDef dec fill:#fde0dc,stroke:#f8bbd0,color:#333,stroke-width:1px;
+classDef proc fill:#e8f5e9,stroke:#a5d6a7,color:#333,stroke-width:1px;
+```
+
+---
